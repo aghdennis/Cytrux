@@ -1,0 +1,54 @@
+﻿.menubtn {
+    z-index: 1000;
+    width: 51px;
+    height: 52px;
+    margin-top: 2px;
+    float: left;
+}
+
+    .menubtn button {
+        width: 50px;
+        height: 50px;
+        z-index: 1000;
+    }
+
+.sidemenupanel {
+    width: 80%;
+    height: 100%;
+    z-index: 100;
+    background-color: green;
+    position: absolute;
+}
+
+    .sidemenupanel .menubtn {
+        float: right;
+    }
+
+.content{
+    z-index:1000;
+    width:100%;
+    height:100%;
+    position:absolute;
+}
+
+.thribeheader {    
+    width: 100%;
+    height: 55px;
+    overflow: auto;
+    background-color: brown;
+}
+
+.pages {
+    
+}
+
+.content .pages {
+    position: relative;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.content .thribeheader{
+    margin-top:0px;
+    position:relative;
+}

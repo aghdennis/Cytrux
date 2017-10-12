@@ -1,0 +1,12 @@
+﻿
+
+<div>
+    <input type="text"  [(ngModel)]='inputText' (keyup)=filter() placeholder="Type the name of the Service here">    
+</div>
+<div [@dropDownTrigger]="dropdownState" >
+    <ul *ngFor="let item of filteredList">
+        <li>
+            <a (click)="selectedItem(item)">{{item}}</a>
+        </li>
+    </ul>
+</div>  

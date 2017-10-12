@@ -1,0 +1,44 @@
+﻿
+#notifications 
+{
+    margin:auto;
+    width: 80%; 
+    border: solid 2px steelblue
+}
+#boxcontenttext 
+{
+    background: khaki;
+}
+
+.boxshadow {
+    -moz-box-shadow: 3px 3px 5px #535353;
+    -webkit-box-shadow: 3px 3px 5px #535353;
+    box-shadow: 3px 3px 5px #535353;
+}
+
+.roundbox {
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.gridheader, .gridheaderbig, .gridheaderleft, .gridheaderright {
+    padding: 4px 4px 4px 4px;
+    background: #003399 url(images/vertgradient.png) repeat-x;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: khaki;
+}
+
+.gridheaderleft {
+    text-align: left;
+}
+
+.gridheaderright {
+    text-align: right;
+}
+
+.gridheaderbig {
+    font-size: 135%;
+}

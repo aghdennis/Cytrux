@@ -1,0 +1,32 @@
+﻿
+.dashboard-link 
+{     
+    width:112px;
+    height:52px;
+    float:right;
+    margin-top:2px;
+}
+
+    .dashboard-link button 
+    {
+        background-position: center;
+        width: 50px;
+        height: 50px;
+        margin-left:2px;
+    }
+
+
+/*General SmartPhone Sizes including iphone 4*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    
+}
+
+/*Mostly for Iphones but also mixed Potrait and Landscapes*/
+@media only screen and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/*Android and mixed Potrait and landscapes*/
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    
+
+}
