@@ -1,10 +1,4 @@
-/*This will be the top most header of every thribe app page*/
-/*Functions*/
-/*Display short cuts to either the dashboard or home page depending on user login status*/
-/*Contain the ionic menu controller that will be a side menu*/
-/*We shall build the menu components from scratch*/
-/*This class shall implement the ngoninit*/
-/*The dahboard link component shall only appear when the user is logged in*/
+/*The header component*/
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

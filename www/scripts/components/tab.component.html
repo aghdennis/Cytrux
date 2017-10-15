@@ -1,18 +1,22 @@
 ﻿
+   
+    <div id="boxcontenttext" >       
+        <div id="Location" class="tabcontent" [@menuTabLocation]="menuTabLocationState">
+            <h3>By Location</h3>
+            <button class="tablinks">Find By Location</button>
+            <span [innerHTML]="lattitude"></span>
+            <span [innerHTML]="longitude"></span>
+        </div>
+        <div id="Categories" class="tabcontent" [@menuTabCategory]="menuTabCategoryState">
+            <h3>By Category</h3>
+            <thribe-autocomplete></thribe-autocomplete>
+            <p>This is where the combo box component will sit</p>
+            <button class="tablinks">Find By Category</button>
+        </div>
+        <div class="tab">
+            <button class="tablinks" #LocationTag name="Location" (click)="OpenTab(LocationTag.name)">By Location</button>
+            <button class="tablinks" #CategoryTab name="Category" (click)="OpenTab(CategoryTab.name)">By Category</button>
+        </div>
+    </div>
 
-<div class="tab" >
-    <button class="tablinks" #LocationTag name="Location" (click)="OpenTab(LocationTag.name)">By Location</button>    
-    <button class="tablinks" #CategoryTab name="Category" (click)="OpenTab(CategoryTab.name)">By Category</button>    
-</div>
-<div id="Location" class="tabcontent" [@menuTabLocation]="menuTabLocationState">
-    <h3>By Location</h3>
-    <button class="tablinks">Find By Location</button>
-    <span [innerHTML] ="lattitude"></span>
-    <span [innerHTML]="longitude"></span>
-</div>
-<div id="Categories" class="tabcontent" [@menuTabCategory]="menuTabCategoryState">
-    <h3>By Category</h3>
-    <thribe-autocomplete></thribe-autocomplete>
-    <p>This is where the combo box component will sit</p>
-    <button class="tablinks">Find By Category</button>
-</div>
+

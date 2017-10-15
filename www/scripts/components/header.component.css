@@ -1,13 +1,27 @@
 ﻿
 
-.thibeheader
-{
-    margin:auto;
-    width:99%;
-    height:55px;   
-    overflow:auto;
-    background-color:brown;
+
+/*General for mobiles in Landscapes mode*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .drawermenu {
+        position: absolute;
+        width: 100%;
+        background-color: blue;
+        height: 70%;
+        z-index: 900;
+        top:-435px;
+    }
+
+        .drawermenu #panel {
+            width: 80%;
+            background-color: red;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100%;
+        }      
 }
 
-
+/*General for Portrait mode*/
 

@@ -16,7 +16,7 @@ import { Geolocation } from 'ionic-native-geolocation';
     animations: [
         trigger('menuTabLocation',[
             state('show', style({
-                opacity : '1', display:'block'
+                opacity: '1', display: 'block'
             })),
             state('hide', style({
                 opacity: '0', display:'none'
@@ -33,21 +33,24 @@ import { Geolocation } from 'ionic-native-geolocation';
             })),
             transition('show => hide', animate('200ms ease-in-out')),
             transition('hide => show', animate('200ms ease-in-out'))
-        ])
+        ])       
     ]//,
     //providers : [Geolocation ]
 })
 export class ThribeTab
 {
     private menuTabLocationState: string = "show";
-    private menuTabCategoryState: string = "hide"; 
+    private menuTabCategoryState: string = "hide";    
     private lattitude: number;
     private longitude: number;   
 
     constructor(private geolocation: Geolocation) {
        
     }
-   
+
+   //we subscribe to an event in order to fire the action sheet animations
+    //we create an event emitter here which will fire when a button outside this control is clicked
+
     OpenTab(name: string) {        
         this.geolocation.getCurrentPosition().then((pos) => {
             console.log("inside the geolocation get current position method");
@@ -67,5 +70,7 @@ export class ThribeTab
                 break;
         }
     }  
+
+    //subscribe to an event that allows it to animate from below
 }
 

@@ -1,5 +1,40 @@
 ﻿
 
-body{
+/*General for mobiles in Landscapes mode - hdpi*/
+@media only screen and (min-device-width: 321px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 
+    .pages {
+        position: absolute;
+        width: 100%;
+        z-index: 300;
+        height: 100%;
+        background: url(../../images/hdpi/bg_gra.png) no-repeat center;
+    }
+
+    #btnFindService {
+        position: relative;
+        width: 80%;
+        background-position: center;
+        margin-left: auto;
+    }
+
+    #homeContent {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        background-position: center;
+    }
+
+        #homeContent button {
+            width: 80%;
+            height: 64px;
+            margin-top:300px;
+            margin-left:auto;
+            text-align: center;
+            color: antiquewhite;
+            font-weight: bold;
+            background: url(../../images/mdpi/btn_bkg.png) repeat-x
+        }
 }
+

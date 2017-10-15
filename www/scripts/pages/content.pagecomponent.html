@@ -1,14 +1,13 @@
 ﻿
-
-
 <div>    
     <thribe-menu></thribe-menu>
-    <div class="content"  [@menuTrigger]="menuState">       
+    <div class="content"  [@menuTrigger]="menuState" (onActionSheetToggle)="ToggleActionSheet($event)" > 
         <div class="thibeheader">
-            <button (click)="toggleMenu()">MM</button>
-            <dashboard-link></dashboard-link>
+            <button class="menubtn" (click)="toggleMenu()"></button> 
+            <div class="applogo"></div>
         </div>
-        <div class="pages">
+        <thribe-drawer-menu></thribe-drawer-menu>       
+        <div class="pages" >
             <router-outlet></router-outlet>
         </div>
     </div>    

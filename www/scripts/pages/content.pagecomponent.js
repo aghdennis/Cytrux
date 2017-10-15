@@ -7,23 +7,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", "core", "../components/dashboardlink.component"], function (require, exports, core_1, dashboardlink_component_1) {
+define(["require", "exports", "core", "../components/drawermenu.component", "../services/EventEmitterService"], function (require, exports, core_1, drawermenu_component_1, EventEmitterService_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var ThribeAppContentPage = (function () {
-        function ThribeAppContentPage() {
+        function ThribeAppContentPage(eventEmitter) {
+            this.eventEmitter = eventEmitter;
             this.menuState = 'in';
-            //the master page and navigator controller of the system
-            //we will listen for events to disable the dashboard link here
         }
         ThribeAppContentPage.prototype.toggleMenu = function () {
             this.menuState = this.menuState === 'out' ? 'in' : 'out';
-            //fire an event on every toggle
+        };
+        ThribeAppContentPage.prototype.ngOnInit = function () {
+            if (this.eventEmitter) {
+                //this.eventEmitter.      
+            }
+        };
+        /**
+         Toggles the action sheet
+         */
+        ThribeAppContentPage.prototype.ToggleActionSheet = function () {
+            console.log("on action sheet toggle event received by parent");
+            this.drawerMenu.DropDownMenu();
         };
         __decorate([
-            core_1.ViewChild(dashboardlink_component_1.DashBoardLink),
-            __metadata("design:type", dashboardlink_component_1.DashBoardLink)
-        ], ThribeAppContentPage.prototype, "dashBoardLink", void 0);
+            core_1.ViewChild(drawermenu_component_1.DrawerMenu),
+            __metadata("design:type", drawermenu_component_1.DrawerMenu)
+        ], ThribeAppContentPage.prototype, "drawerMenu", void 0);
         ThribeAppContentPage = __decorate([
             core_1.Component({
                 templateUrl: "scripts/pages/content.pagecomponent.html",
@@ -40,7 +50,8 @@ define(["require", "exports", "core", "../components/dashboardlink.component"], 
                         core_1.transition('out => in', core_1.animate('350ms ease-in-out'))
                     ])
                 ]
-            })
+            }),
+            __metadata("design:paramtypes", [EventEmitterService_1.EventEmitterService])
         ], ThribeAppContentPage);
         return ThribeAppContentPage;
     }());

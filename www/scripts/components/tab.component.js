@@ -19,16 +19,14 @@ define(["require", "exports", "core", "ionic-native-geolocation"], function (req
             this.menuTabLocationState = "show";
             this.menuTabCategoryState = "hide";
         }
+        //we subscribe to an event in order to fire the action sheet animations
+        //we create an event emitter here which will fire when a button outside this control is clicked
         ThribeTab.prototype.OpenTab = function (name) {
-            console.log(this.geolocation);
             this.geolocation.getCurrentPosition().then(function (pos) {
-                console.log("current position is...");
-                console.log(pos);
+                console.log("inside the geolocation get current position method");
             }, function (err) {
                 console.log("error : " + err.message);
             });
-            console.log("The device uuid is");
-            //console.log(this.device.uuid);
             switch (name) {
                 case 'Location':
                     this.menuTabLocationState = 'show';

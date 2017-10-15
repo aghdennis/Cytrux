@@ -35,9 +35,12 @@ body {
 .app {
     background: url(../images/thribe-brows.png) no-repeat center top;
     position: absolute;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
 }
+
+
 
 h1 {
     font-size: 24px;
@@ -90,20 +93,24 @@ h1 {
     -webkit-animation: fade 3000ms infinite;
 }
 
-/*General SmartPhone Sizes including iphone 4*/
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
-{
-    
+/*General for mobile phones in Potrait Mode*/
+@media only screen and (max-device-width : 320px) {
+    .app {
+        background: url(../images/mdpi/bg_gra.png) no-repeat center;
+    }
 }
 
-/*Mostly for Iphones but also mixed Potrait and Landscapes*/
-@media only screen and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) 
-{
-
+/*General for mobiles in Landscapes mode*/
+@media only screen and (min-device-width: 321px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .app {
+        background: url(../images/hdpi/bg_gra.png) no-repeat center;
+    }
 }
 
-/*Android and mixed Potrait and landscapes*/
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) 
-{
-    
+
+/*For tablets*/
+@media screen and (min-device-width: 640px) {
+    .app {
+        background: url(../images/xhdpi/bg_gra.png) no-repeat center;
+    }
 }

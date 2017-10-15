@@ -12,7 +12,12 @@ define(["require", "exports", "core"], function (require, exports, core_1) {
     Object.defineProperty(exports, "__esModule", { value: true });
     var ThribeAppBasePage = (function () {
         function ThribeAppBasePage() {
+            this.onActionSheetToggle = new core_1.EventEmitter();
         }
+        __decorate([
+            core_1.Output(),
+            __metadata("design:type", core_1.EventEmitter)
+        ], ThribeAppBasePage.prototype, "onActionSheetToggle", void 0);
         ThribeAppBasePage = __decorate([
             core_1.Component({
                 templateUrl: "scripts/pages/base.pagecomponent.html",

@@ -5,7 +5,6 @@ import { Geolocation, Geoposition, GeolocationOptions } from 'ionic-native-geolo
 
 @Injectable()
 export class GeolocationMock extends Geolocation {
-
     constructor() {
         super();
     }    
