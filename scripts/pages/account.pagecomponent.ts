@@ -1,12 +1,10 @@
 ﻿
-
-
-
 /*My Account Page*/
 
 import { Component } from 'core';
 import { ThribeAppBasePage } from './base.pagecomponent';
-
+import { EventEmitterService } from '../services/EventEmitterService';
+import { Router } from 'router';
 
 @Component({
     selector: 'thribe-account',
@@ -15,7 +13,7 @@ import { ThribeAppBasePage } from './base.pagecomponent';
 
 })
 export class Account extends ThribeAppBasePage {
-    constructor() {
-        super();
+    constructor(public router: Router, public eventEmitter: EventEmitterService) {
+        super(router, eventEmitter);
     }
 }

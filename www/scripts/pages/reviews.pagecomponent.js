@@ -18,13 +18,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", "core", "./base.pagecomponent"], function (require, exports, core_1, base_pagecomponent_1) {
+define(["require", "exports", "core", "./base.pagecomponent", "../services/EventEmitterService", "router"], function (require, exports, core_1, base_pagecomponent_1, EventEmitterService_1, router_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var Reviews = (function (_super) {
         __extends(Reviews, _super);
-        function Reviews() {
-            return _super.call(this) || this;
+        function Reviews(router, eventEmitter) {
+            return _super.call(this, router, eventEmitter) || this;
         }
         Reviews = __decorate([
             core_1.Component({
@@ -32,7 +32,7 @@ define(["require", "exports", "core", "./base.pagecomponent"], function (require
                 templateUrl: "scripts/pages/reviews.pagecomponent.html",
                 styleUrls: ['scripts/pages/reviews.pagecomponent.css']
             }),
-            __metadata("design:paramtypes", [])
+            __metadata("design:paramtypes", [router_1.Router, EventEmitterService_1.EventEmitterService])
         ], Reviews);
         return Reviews;
     }(base_pagecomponent_1.ThribeAppBasePage));

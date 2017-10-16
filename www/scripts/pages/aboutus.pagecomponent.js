@@ -18,13 +18,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", "core", "./base.pagecomponent"], function (require, exports, core_1, base_pagecomponent_1) {
+define(["require", "exports", "core", "./base.pagecomponent", "../services/EventEmitterService", "router"], function (require, exports, core_1, base_pagecomponent_1, EventEmitterService_1, router_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var AboutUs = (function (_super) {
         __extends(AboutUs, _super);
-        function AboutUs() {
-            return _super.call(this) || this;
+        function AboutUs(router, eventEmitter) {
+            var _this = _super.call(this, router, eventEmitter) || this;
+            _this.router = router;
+            _this.eventEmitter = eventEmitter;
+            return _this;
         }
         AboutUs = __decorate([
             core_1.Component({
@@ -32,7 +35,7 @@ define(["require", "exports", "core", "./base.pagecomponent"], function (require
                 templateUrl: "scripts/pages/aboutus.pagecomponent.html",
                 styleUrls: ['scripts/pages/aboutus.pagecomponent.css']
             }),
-            __metadata("design:paramtypes", [])
+            __metadata("design:paramtypes", [router_1.Router, EventEmitterService_1.EventEmitterService])
         ], AboutUs);
         return AboutUs;
     }(base_pagecomponent_1.ThribeAppBasePage));

@@ -1,12 +1,9 @@
-﻿
-
-
-
-/*My Reviews Page*/
+﻿/*My Reviews Page*/
 
 import { Component } from 'core';
 import { ThribeAppBasePage } from './base.pagecomponent';
-
+import { EventEmitterService } from '../services/EventEmitterService';
+import { Router } from 'router';
 
 @Component({
     selector: 'thribe-reviews',
@@ -14,7 +11,7 @@ import { ThribeAppBasePage } from './base.pagecomponent';
     styleUrls: ['scripts/pages/reviews.pagecomponent.css']
 })
 export class Reviews extends ThribeAppBasePage {
-    constructor() {
-        super();
+    constructor(router: Router, eventEmitter: EventEmitterService) {
+        super(router, eventEmitter)
     }
 }

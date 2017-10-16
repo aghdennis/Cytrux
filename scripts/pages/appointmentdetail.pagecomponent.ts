@@ -1,11 +1,9 @@
-﻿
-
-
-
-/*Appointments List Page*/
+﻿/*Appointments List Page*/
 
 import { Component } from 'core';
 import { ThribeAppBasePage } from './base.pagecomponent';
+import { EventEmitterService } from '../services/EventEmitterService';
+import { Router } from 'router';
 
 
 @Component({
@@ -15,7 +13,7 @@ import { ThribeAppBasePage } from './base.pagecomponent';
 
 })
 export class AppointmentDetail extends ThribeAppBasePage {
-    constructor() {
-        super();
+    constructor(router: Router, eventEmitter: EventEmitterService) {
+        super(router, eventEmitter);
     }
 }

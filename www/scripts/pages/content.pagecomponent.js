@@ -19,8 +19,12 @@ define(["require", "exports", "core", "../components/drawermenu.component", "../
             this.menuState = this.menuState === 'out' ? 'in' : 'out';
         };
         ThribeAppContentPage.prototype.ngOnInit = function () {
+            var _this = this;
             if (this.eventEmitter) {
-                //this.eventEmitter.      
+                this.eventEmitter.ActionSheetEvent.subscribe(function () {
+                    console.log(" The action sheet has been toggled..");
+                    _this.ToggleActionSheet();
+                });
             }
         };
         /**

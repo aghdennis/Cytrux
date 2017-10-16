@@ -6,6 +6,8 @@
 
 import { Component } from 'core';
 import { ThribeAppBasePage } from './base.pagecomponent';
+import { EventEmitterService } from '../services/EventEmitterService';
+import { Router } from 'router';
 
 
 @Component({
@@ -15,7 +17,7 @@ import { ThribeAppBasePage } from './base.pagecomponent';
 
 })
 export class AboutUs extends ThribeAppBasePage {
-    constructor() {
-        super();
+    constructor(public router: Router, public eventEmitter: EventEmitterService) {
+        super(router, eventEmitter);
     }
 }

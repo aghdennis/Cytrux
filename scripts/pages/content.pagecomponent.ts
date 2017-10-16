@@ -43,7 +43,10 @@ export class ThribeAppContentPage implements OnInit
 
     ngOnInit() {
         if (this.eventEmitter) {
-            //this.eventEmitter.      
+            this.eventEmitter.ActionSheetEvent.subscribe(() => {
+                console.log(" The action sheet has been toggled..");
+                this.ToggleActionSheet();
+            });
         }
     }
 

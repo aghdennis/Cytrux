@@ -1,11 +1,9 @@
-﻿
-
-
-
-/*My JobList Page*/
+﻿/*My JobList Page*/
 
 import { Component } from 'core';
 import { ThribeAppBasePage } from './base.pagecomponent';
+import { EventEmitterService } from '../services/EventEmitterService';
+import { Router } from 'router';
 
 @Component({
     selector: 'thribe-joblist',
@@ -14,7 +12,7 @@ import { ThribeAppBasePage } from './base.pagecomponent';
 
 })
 export class JobList extends ThribeAppBasePage {
-    constructor() {
-        super();
+    constructor(public router: Router, public eventEmitter: EventEmitterService) {
+        super(router, eventEmitter);
     }
 }

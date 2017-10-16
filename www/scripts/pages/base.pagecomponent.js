@@ -7,22 +7,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", "core"], function (require, exports, core_1) {
+define(["require", "exports", "core", "../services/EventEmitterService", "router"], function (require, exports, core_1, EventEmitterService_1, router_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var ThribeAppBasePage = (function () {
-        function ThribeAppBasePage() {
-            this.onActionSheetToggle = new core_1.EventEmitter();
+        function ThribeAppBasePage(_router, eventEmitterService) {
+            this._router = _router;
+            this.eventEmitterService = eventEmitterService;
         }
-        __decorate([
-            core_1.Output(),
-            __metadata("design:type", core_1.EventEmitter)
-        ], ThribeAppBasePage.prototype, "onActionSheetToggle", void 0);
+        ThribeAppBasePage.prototype.FireActionSheetEvent = function () {
+            this.eventEmitterService.ToggleActionSheet();
+        };
+        ThribeAppBasePage.prototype.GotoPage = function () {
+        };
         ThribeAppBasePage = __decorate([
             core_1.Component({
                 templateUrl: "scripts/pages/base.pagecomponent.html",
             }),
-            __metadata("design:paramtypes", [])
+            __metadata("design:paramtypes", [router_1.Router, EventEmitterService_1.EventEmitterService])
         ], ThribeAppBasePage);
         return ThribeAppBasePage;
     }());

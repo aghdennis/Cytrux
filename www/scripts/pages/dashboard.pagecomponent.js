@@ -18,13 +18,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", "core", "./base.pagecomponent"], function (require, exports, core_1, base_pagecomponent_1) {
+define(["require", "exports", "core", "./base.pagecomponent", "../services/EventEmitterService", "router"], function (require, exports, core_1, base_pagecomponent_1, EventEmitterService_1, router_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var Dashboard = (function (_super) {
         __extends(Dashboard, _super);
-        function Dashboard() {
-            return _super.call(this) || this;
+        function Dashboard(router, eventEmitter) {
+            return _super.call(this, router, eventEmitter) || this;
         }
         Dashboard = __decorate([
             core_1.Component({
@@ -32,7 +32,7 @@ define(["require", "exports", "core", "./base.pagecomponent"], function (require
                 templateUrl: "scripts/pages/dashboard.pagecomponent.html",
                 styleUrls: ['scripts/pages/dashboard.pagecomponent.css']
             }),
-            __metadata("design:paramtypes", [])
+            __metadata("design:paramtypes", [router_1.Router, EventEmitterService_1.EventEmitterService])
         ], Dashboard);
         return Dashboard;
     }(base_pagecomponent_1.ThribeAppBasePage));

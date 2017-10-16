@@ -1,12 +1,9 @@
-﻿
-
-
-
-/*My Login Page*/
+﻿/*My Login Page*/
 
 import { Component } from 'core';
 import { ThribeAppBasePage } from './base.pagecomponent';
-
+import { EventEmitterService } from '../services/EventEmitterService';
+import { Router } from 'router';
 
 @Component({
     selector: 'thribe-login',
@@ -15,7 +12,7 @@ import { ThribeAppBasePage } from './base.pagecomponent';
 
 })
 export class Login extends ThribeAppBasePage {
-    constructor() {
-        super();
+    constructor(router: Router, eventEmitter: EventEmitterService) {
+        super(router, eventEmitter)
     }
 }

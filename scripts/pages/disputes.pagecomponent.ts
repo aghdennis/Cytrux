@@ -1,11 +1,9 @@
-﻿
-
-
-
-/*Disputes Page*/
+﻿/*Disputes Page*/
 
 import { Component } from 'core';
 import { ThribeAppBasePage } from './base.pagecomponent';
+import { EventEmitterService } from '../services/EventEmitterService';
+import { Router } from 'router';
 
 
 @Component({
@@ -15,7 +13,7 @@ import { ThribeAppBasePage } from './base.pagecomponent';
 
 })
 export class Disputes extends ThribeAppBasePage {
-    constructor() {
-        super();
+    constructor(public router:Router, public eventEmitter: EventEmitterService) {
+        super(router, eventEmitter);
     }
 }

@@ -1,9 +1,9 @@
-﻿
-
-/*Dashboard Page*/
+﻿/*Dashboard Page*/
 
 import { Component } from 'core';
 import { ThribeAppBasePage } from './base.pagecomponent';
+import { EventEmitterService } from '../services/EventEmitterService';
+import { Router } from 'router';
 
 @Component({
     selector: 'thribe-dashboard',
@@ -11,8 +11,8 @@ import { ThribeAppBasePage } from './base.pagecomponent';
     styleUrls: ['scripts/pages/dashboard.pagecomponent.css']
 })
 export class Dashboard extends ThribeAppBasePage {
-    constructor() {
-        super();
+    constructor(router: Router, eventEmitter: EventEmitterService) {
+        super(router, eventEmitter);
     }
 
     //users coming up to this page must be authenticated

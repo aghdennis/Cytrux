@@ -18,25 +18,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-define(["require", "exports", "core", "../services/EventEmitterService", "./base.pagecomponent", "router"], function (require, exports, core_1, EventEmitterService_1, base_pagecomponent_1, router_1) {
+define(["require", "exports", "core", "./base.pagecomponent", "../services/EventEmitterService", "router"], function (require, exports, core_1, base_pagecomponent_1, EventEmitterService_1, router_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var Home = (function (_super) {
         __extends(Home, _super);
         function Home(router, eventEmitter) {
-            var _this = _super.call(this) || this;
+            var _this = _super.call(this, router, eventEmitter) || this;
+            _this.router = router;
             _this.eventEmitter = eventEmitter;
-            _this._router = router;
             return _this;
         }
-        //if a setting is made then the tab can show when the home page loads
-        Home.prototype.GotoPage = function () {
-        };
-        Home.prototype.FireActionSheetEvent = function () {
-            console.log("toggle action sheet event fired");
-            this.eventEmitter.emit(null);
-            //at the click of this button will subscribe to an observable that was created by the service
-        };
         Home = __decorate([
             core_1.Component({
                 selector: 'thribe-home',

@@ -1,17 +1,14 @@
 ﻿
 import { EventEmitter, Injectable } from 'core';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
-export class EventEmitterService extends EventEmitter<any>
+export class EventEmitterService 
 {
-    constructor() { super(); }
+    public ActionSheetEvent: Subject<any> = new Subject<any>();
 
-    publish() {
-        //will publish an event to a global constant
+    ToggleActionSheet() {
+        this.ActionSheetEvent.next(); //fire off to any listener
     }
 
-    subscribe() {
-
-        //after subscibing the event it is unpublished o
-    }
 }

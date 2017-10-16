@@ -1,11 +1,9 @@
-﻿
-
-
-
-/*My Register Page*/
+﻿/*My Register Page*/
 
 import { Component } from 'core';
 import { ThribeAppBasePage } from './base.pagecomponent';
+import { EventEmitterService } from '../services/EventEmitterService';
+import { Router } from 'router';
 
 @Component({
     selector: 'thribe-register',
@@ -13,7 +11,7 @@ import { ThribeAppBasePage } from './base.pagecomponent';
     styleUrls: ['scripts/pages/register.pagecomponent.css']
 })
 export class Register extends ThribeAppBasePage {
-    constructor() {
-        super();
+    constructor(router: Router, eventEmitter: EventEmitterService) {
+        super(router, eventEmitter)
     }
 }
